@@ -31,10 +31,10 @@ class MainScreen extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Responsive(
-        mobile: ListOfEmails(),
+        mobile: const ListOfEmails(),
         tablet: Row(
           children: [
-            Expanded(
+            const Expanded(
               flex: 6,
               child: ListOfEmails(),
             ),
@@ -48,11 +48,11 @@ class MainScreen extends StatelessWidget {
           children: [
             Expanded(
               flex: size.width > 1340 ? 2 : 4,
-              child: SideMenu(),
+              child: const SideMenu(),
             ),
             Expanded(
               flex: size.width > 1340 ? 3 : 5,
-              child: ListOfEmails(),
+              child: const ListOfEmails(),
             ),
             Expanded(
               flex: size.width > 1340 ? 8 : 10,

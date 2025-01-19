@@ -58,7 +58,8 @@ class Email {
         isAttachmentAvailable: true,
         isChecked: false,
         tagColor: null,
-        time: timeFormat.format(now.subtract(Duration(hours: 1, minutes: 28))),
+        time: timeFormat
+            .format(now.subtract(const Duration(hours: 1, minutes: 28))),
         body: localizations.emailDemoText,
       ),
       Email(
@@ -68,7 +69,8 @@ class Email {
         isAttachmentAvailable: true,
         isChecked: false,
         tagColor: null,
-        time: timeFormat.format(now.subtract(Duration(hours: 2, minutes: 33))),
+        time: timeFormat
+            .format(now.subtract(const Duration(hours: 2, minutes: 33))),
         body: localizations.emailDemoText,
       ),
       Email(
@@ -78,7 +80,8 @@ class Email {
         isAttachmentAvailable: false,
         isChecked: true,
         tagColor: const Color(0xFF23CF91),
-        time: timeFormat.format(now.subtract(Duration(hours: 4, minutes: 17))),
+        time: timeFormat
+            .format(now.subtract(const Duration(hours: 4, minutes: 17))),
         body: localizations.emailDemoText,
       ),
       Email(
@@ -88,7 +91,8 @@ class Email {
         isAttachmentAvailable: false,
         isChecked: false,
         tagColor: const Color(0xFF3A6FF7),
-        time: timeFormat.format(now.subtract(Duration(hours: 5, minutes: 2))),
+        time: timeFormat
+            .format(now.subtract(const Duration(hours: 5, minutes: 2))),
         body: localizations.emailDemoText,
       ),
     ];

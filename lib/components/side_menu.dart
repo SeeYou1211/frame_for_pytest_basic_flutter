@@ -31,11 +31,11 @@ class SideMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: double.infinity,
-      padding: EdgeInsets.only(top: kIsWeb ? kDefaultPadding : 0),
+      padding: const EdgeInsets.only(top: kIsWeb ? kDefaultPadding : 0),
       color: kBgLightColor,
       child: SafeArea(
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           child: Column(
             children: [
               Row(
@@ -44,11 +44,11 @@ class SideMenu extends StatelessWidget {
                     "assets/images/Logo Outlook.png",
                     width: 46,
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Row(
                     children: [
                       IconButton(
-                        icon: Icon(Icons.language),
+                        icon: const Icon(Icons.language),
                         color: kTextColor,
                         onPressed: () => _changeLanguage(context),
                       ),
@@ -56,22 +56,23 @@ class SideMenu extends StatelessWidget {
                         Localizations.localeOf(context).languageCode == 'zh'
                             ? '中文'
                             : 'English',
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: kTextColor,
                           fontSize: 14,
                         ),
                       ),
                     ],
                   ),
-                  Spacer(),
-                  if (!Responsive.isDesktop(context)) CloseButton(),
+                  const Spacer(),
+                  if (!Responsive.isDesktop(context)) const CloseButton(),
                 ],
               ),
-              SizedBox(height: kDefaultPadding),
+              const SizedBox(height: kDefaultPadding),
               TextButton.icon(
                 style: TextButton.styleFrom(
-                  minimumSize: Size(double.infinity, 0),
-                  padding: EdgeInsets.symmetric(vertical: kDefaultPadding),
+                  minimumSize: const Size(double.infinity, 0),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: kDefaultPadding),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -83,18 +84,19 @@ class SideMenu extends StatelessWidget {
                 },
                 icon: SvgPicture.asset("assets/Icons/Edit.svg", width: 16),
                 label: Text(
-                  AppLocalizations.of(context)!.newMessage,
-                  style: TextStyle(color: Colors.white),
+                  AppLocalizations.of(context).newMessage,
+                  style: const TextStyle(color: Colors.white),
                 ),
               ).addNeumorphism(
                 topShadowColor: Colors.white,
-                bottomShadowColor: Color(0xFF234395).withOpacity(0.2),
+                bottomShadowColor: const Color(0xFF234395).withOpacity(0.2),
               ),
-              SizedBox(height: kDefaultPadding),
+              const SizedBox(height: kDefaultPadding),
               TextButton.icon(
                 style: TextButton.styleFrom(
-                  minimumSize: Size(double.infinity, 0),
-                  padding: EdgeInsets.symmetric(vertical: kDefaultPadding),
+                  minimumSize: const Size(double.infinity, 0),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: kDefaultPadding),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -106,42 +108,42 @@ class SideMenu extends StatelessWidget {
                 },
                 icon: SvgPicture.asset("assets/Icons/Download.svg", width: 16),
                 label: Text(
-                  AppLocalizations.of(context)!.getMessages,
-                  style: TextStyle(color: kTextColor),
+                  AppLocalizations.of(context).getMessages,
+                  style: const TextStyle(color: kTextColor),
                 ),
               ).addNeumorphism(),
-              SizedBox(height: kDefaultPadding * 2),
+              const SizedBox(height: kDefaultPadding * 2),
               SideMenuItem(
                 press: () {},
-                title: AppLocalizations.of(context)!.inbox,
+                title: AppLocalizations.of(context).inbox,
                 iconSrc: "assets/Icons/Inbox.svg",
                 isActive: true,
                 itemCount: 3,
               ),
               SideMenuItem(
                 press: () {},
-                title: AppLocalizations.of(context)!.sent,
+                title: AppLocalizations.of(context).sent,
                 iconSrc: "assets/Icons/Send.svg",
                 isActive: false,
                 itemCount: 0,
               ),
               SideMenuItem(
                 press: () {},
-                title: AppLocalizations.of(context)!.drafts,
+                title: AppLocalizations.of(context).drafts,
                 iconSrc: "assets/Icons/File.svg",
                 isActive: false,
                 itemCount: 0,
               ),
               SideMenuItem(
                 press: () {},
-                title: AppLocalizations.of(context)!.deleted,
+                title: AppLocalizations.of(context).deleted,
                 iconSrc: "assets/Icons/Trash.svg",
                 isActive: false,
                 showBorder: false,
                 itemCount: 0,
               ),
-              SizedBox(height: kDefaultPadding * 2),
-              Tags(),
+              const SizedBox(height: kDefaultPadding * 2),
+              const Tags(),
             ],
           ),
         ),

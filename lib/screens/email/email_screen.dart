@@ -22,11 +22,11 @@ class EmailScreen extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
-              Header(),
-              Divider(thickness: 1),
+              const Header(),
+              const Divider(thickness: 1),
               Expanded(
                 child: SingleChildScrollView(
-                  padding: EdgeInsets.all(kDefaultPadding),
+                  padding: const EdgeInsets.all(kDefaultPadding),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -34,9 +34,9 @@ class EmailScreen extends StatelessWidget {
                         maxRadius: 24,
                         backgroundColor: Colors.transparent,
                         backgroundImage:
-                            AssetImage(Email.getEmails(context)[1].image!),
+                            AssetImage(Email.getEmails(context)[1].image),
                       ),
-                      SizedBox(width: kDefaultPadding),
+                      const SizedBox(width: kDefaultPadding),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,14 +73,14 @@ class EmailScreen extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                SizedBox(width: kDefaultPadding / 2),
+                                const SizedBox(width: kDefaultPadding / 2),
                                 Text(
                                   email.subject ?? 'No Subject',
                                   style: Theme.of(context).textTheme.titleLarge,
                                 ),
                               ],
                             ),
-                            SizedBox(height: kDefaultPadding),
+                            const SizedBox(height: kDefaultPadding),
                             LayoutBuilder(
                               builder: (context, constraints) => SizedBox(
                                 width: constraints.maxWidth > 850
@@ -91,13 +91,13 @@ class EmailScreen extends StatelessWidget {
                                   children: [
                                     Text(
                                       email.body ?? '',
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         height: 1.5,
                                         color: Color(0xFF4D5875),
                                         fontWeight: FontWeight.w300,
                                       ),
                                     ),
-                                    SizedBox(height: kDefaultPadding),
+                                    const SizedBox(height: kDefaultPadding),
                                     Row(
                                       children: [
                                         Text(
@@ -106,14 +106,15 @@ class EmailScreen extends StatelessWidget {
                                               .textTheme
                                               .bodyMedium,
                                         ),
-                                        Spacer(),
+                                        const Spacer(),
                                         Text(
                                           'Download All',
                                           style: Theme.of(context)
                                               .textTheme
                                               .bodySmall,
                                         ),
-                                        SizedBox(width: kDefaultPadding / 4),
+                                        const SizedBox(
+                                            width: kDefaultPadding / 4),
                                         SvgPicture.asset(
                                           "assets/Icons/Download.svg",
                                           height: 16,
@@ -121,8 +122,8 @@ class EmailScreen extends StatelessWidget {
                                         ),
                                       ],
                                     ),
-                                    Divider(thickness: 1),
-                                    SizedBox(height: kDefaultPadding / 2),
+                                    const Divider(thickness: 1),
+                                    const SizedBox(height: kDefaultPadding / 2),
                                     SizedBox(
                                       height: 200,
                                       child: StaggeredGrid.count(

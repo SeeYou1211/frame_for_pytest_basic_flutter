@@ -11,7 +11,7 @@ class ErrorPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text(
-          AppLocalizations.of(context)!.errorMessage,
+          AppLocalizations.of(context).errorMessage,
           style: const TextStyle(
             color: Colors.red,
             fontSize: 16,

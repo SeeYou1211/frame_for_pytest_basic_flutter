@@ -20,6 +20,8 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -57,7 +59,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           title: 'Flutter Demo',
           theme: ThemeData(
             fontFamily: 'NotoSansSC',
-            textTheme: TextTheme(
+            textTheme: const TextTheme(
               bodyLarge: TextStyle(fontFamily: 'NotoSansSC'),
               bodyMedium: TextStyle(fontFamily: 'NotoSansSC'),
               bodySmall: TextStyle(fontFamily: 'NotoSansSC'),
@@ -86,7 +88,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
             Locale('en'),
             Locale('zh'),
           ],
-          home: MainScreen(),
+          home: const MainScreen(),
           onGenerateTitle: (context) => AppLocalizations.of(context).appTitle,
           builder: (context, widget) {
             ErrorWidget.builder =

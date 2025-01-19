@@ -15,7 +15,7 @@ class Header extends StatelessWidget {
       padding: const EdgeInsets.all(kDefaultPadding),
       child: Row(
         children: [
-          if (Responsive.isMobile(context)) BackButton(),
+          if (Responsive.isMobile(context)) const BackButton(),
           IconButton(
             icon: SvgPicture.asset(
               "assets/Icons/Trash.svg",
@@ -44,7 +44,7 @@ class Header extends StatelessWidget {
             ),
             onPressed: () {},
           ),
-          Spacer(),
+          const Spacer(),
           if (Responsive.isDesktop(context))
             IconButton(
               icon: SvgPicture.asset(

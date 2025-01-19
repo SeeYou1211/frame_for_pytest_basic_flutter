@@ -41,7 +41,7 @@ class EmailCard extends StatelessWidget {
                         child: CircleAvatar(
                           backgroundColor: Colors.transparent,
                           backgroundImage: email.image != null
-                              ? AssetImage(email.image!)
+                              ? AssetImage(email.image)
                               : null,
                         ),
                       ),
@@ -111,7 +111,7 @@ class EmailCard extends StatelessWidget {
               topShadowColor: Colors.white60,
               bottomShadowColor: const Color(0xFF234395).withOpacity(0.15),
             ),
-            if (email.isChecked == false || email.isChecked == null)
+            if (email.isChecked == false)
               Positioned(
                 right: 8,
                 top: 8,

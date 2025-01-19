@@ -29,7 +29,7 @@ class TagWidget extends StatelessWidget {
               height: 18,
               color: color,
             ),
-            SizedBox(width: kDefaultPadding / 2),
+            const SizedBox(width: kDefaultPadding / 2),
             Text(
               title,
               style: Theme.of(context)
@@ -75,9 +75,9 @@ class Tags extends StatelessWidget {
         Row(
           children: [
             SvgPicture.asset(Assets.icons.angleDown.path, width: 16),
-            SizedBox(width: kDefaultPadding / 4),
+            const SizedBox(width: kDefaultPadding / 4),
             SvgPicture.asset(Assets.icons.markup.path, width: 20),
-            SizedBox(width: kDefaultPadding / 2),
+            const SizedBox(width: kDefaultPadding / 2),
             Text(
               'Tags',
               style: Theme.of(context)
@@ -85,14 +85,14 @@ class Tags extends StatelessWidget {
                   .labelLarge
                   ?.copyWith(color: kGrayColor),
             ),
-            Spacer(),
+            const Spacer(),
             MaterialButton(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               minWidth: 40,
               onPressed: () {
                 // TODO: Handle add tag
               },
-              child: Icon(
+              child: const Icon(
                 Icons.add,
                 color: kGrayColor,
                 size: 20,
@@ -100,7 +100,7 @@ class Tags extends StatelessWidget {
             )
           ],
         ),
-        SizedBox(height: kDefaultPadding / 2),
+        const SizedBox(height: kDefaultPadding / 2),
         ...tags.map((tag) => TagWidget(
               color: tag.color,
               title: tag.title,
