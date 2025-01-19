@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:outlook/generated/l10n/l10n.dart' show AppLocalizations;
-import 'package:provider/provider.dart';
 
 class EmailProvider with ChangeNotifier {
   Locale? _currentLocale;

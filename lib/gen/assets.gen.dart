@@ -168,14 +168,8 @@ class $LibL10nGen {
   /// File path: lib/l10n/app_zh.arb
   String get appZh => 'lib/l10n/app_zh.arb';
 
-  /// File path: lib/l10n/intl_en.arb
-  String get intlEn => 'lib/l10n/intl_en.arb';
-
-  /// File path: lib/l10n/intl_zh.arb
-  String get intlZh => 'lib/l10n/intl_zh.arb';
-
   /// List of all assets
-  List<String> get values => [appEn, appZh, intlEn, intlZh];
+  List<String> get values => [appEn, appZh];
 }
 
 class Assets {

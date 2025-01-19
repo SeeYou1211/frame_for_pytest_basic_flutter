@@ -4,7 +4,6 @@ import 'package:outlook/responsive.dart';
 import 'package:outlook/generated/l10n/l10n.dart';
 import 'package:provider/provider.dart';
 import 'package:outlook/theme.dart';
-import '../screens/main/main_screen.dart';
 
 import '../constants.dart';
 import '../extensions.dart';

@@ -43,9 +43,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
-    debugPrint(AppLocalizations.of(navigatorKey.currentContext!)
-        .stateChange
-        .replaceFirst('{state}', state.toString()));
+    // Handle app lifecycle state changes
   }
 
   @override

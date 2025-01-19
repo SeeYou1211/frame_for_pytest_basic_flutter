@@ -12,19 +12,25 @@ import 'intl/messages_all.dart';
 // ignore_for_file: join_return_with_assignment, prefer_final_in_for_each
 // ignore_for_file: avoid_redundant_argument_values, avoid_escaping_inner_quotes
 
+/// 应用本地化类，用于管理多语言资源
 class AppLocalizations {
+  /// 构造函数
   AppLocalizations();
 
+  /// 当前实例
   static AppLocalizations? _current;
 
+  /// 获取当前实例
   static AppLocalizations get current {
     assert(_current != null,
         'No instance of AppLocalizations was loaded. Try to initialize the AppLocalizations delegate before accessing AppLocalizations.current.');
     return _current!;
   }
 
+  /// 本地化代理
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
+  /// 加载指定语言环境的本地化资源
   static Future<AppLocalizations> load(Locale locale) {
     final name = (locale.countryCode?.isEmpty ?? false)
         ? locale.languageCode
@@ -39,6 +45,7 @@ class AppLocalizations {
     });
   }
 
+  /// 从上下文中获取本地化实例
   static AppLocalizations of(BuildContext context) {
     final instance = AppLocalizations.maybeOf(context);
     assert(instance != null,
@@ -46,11 +53,14 @@ class AppLocalizations {
     return instance!;
   }
 
+  /// 尝试从上下文中获取本地化实例，可能返回null
   static AppLocalizations? maybeOf(BuildContext context) {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  /// `Outlook`
+  /// 获取应用标题
+  ///
+  /// 返回: 应用标题字符串
   String get appTitle {
     return Intl.message(
       'Outlook',
@@ -60,7 +70,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Error`
+  /// 获取错误标题
+  ///
+  /// 返回: 错误标题字符串
   String get errorTitle {
     return Intl.message(
       'Error',
@@ -70,7 +82,9 @@ class AppLocalizations {
     );
   }
 
-  /// `An error occurred`
+  /// 获取错误信息
+  ///
+  /// 返回: 错误信息字符串
   String get errorMessage {
     return Intl.message(
       'An error occurred',
@@ -80,7 +94,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Retry`
+  /// 获取重试按钮文本
+  ///
+  /// 返回: 重试按钮文本字符串
   String get retry {
     return Intl.message(
       'Retry',
@@ -90,7 +106,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Cancel`
+  /// 获取取消按钮文本
+  ///
+  /// 返回: 取消按钮文本字符串
   String get cancel {
     return Intl.message(
       'Cancel',
@@ -100,7 +118,9 @@ class AppLocalizations {
     );
   }
 
-  /// `OK`
+  /// 获取确认按钮文本
+  ///
+  /// 返回: 确认按钮文本字符串
   String get ok {
     return Intl.message(
       'OK',
@@ -110,7 +130,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Apple`
+  /// 获取Apple发件人名称
+  ///
+  /// 返回: Apple发件人名称字符串
   String get emailNameApple {
     return Intl.message(
       'Apple',
@@ -120,7 +142,9 @@ class AppLocalizations {
     );
   }
 
-  /// `iPhone 12 is here!`
+  /// 获取iPhone 12邮件主题
+  ///
+  /// 返回: iPhone 12邮件主题字符串
   String get emailSubjectIphone12 {
     return Intl.message(
       'iPhone 12 is here!',
@@ -130,7 +154,9 @@ class AppLocalizations {
     );
   }
 
-  /// `This is a demo email text`
+  /// 获取演示邮件内容
+  ///
+  /// 返回: 演示邮件内容字符串
   String get emailDemoText {
     return Intl.message(
       'This is a demo email text',
@@ -140,7 +166,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Elvia Atkins`
+  /// 获取Elvia Atkins发件人名称
+  ///
+  /// 返回: Elvia Atkins发件人名称字符串
   String get emailNameElvia {
     return Intl.message(
       'Elvia Atkins',
@@ -150,7 +178,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Home Inspiration`
+  /// 获取家居灵感邮件主题
+  ///
+  /// 返回: 家居灵感邮件主题字符串
   String get emailSubjectHomeInspiration {
     return Intl.message(
       'Home Inspiration',
@@ -160,7 +190,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Marvin McKinney`
+  /// 获取Marvin McKinney发件人名称
+  ///
+  /// 返回: Marvin McKinney发件人名称字符串
   String get emailNameMarvin {
     return Intl.message(
       'Marvin McKinney',
@@ -170,7 +202,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Business Focus`
+  /// 获取商业焦点邮件主题
+  ///
+  /// 返回: 商业焦点邮件主题字符串
   String get emailSubjectBusinessFocus {
     return Intl.message(
       'Business Focus',
@@ -180,7 +214,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Domenic Bosco`
+  /// 获取Domenic Bosco发件人名称
+  ///
+  /// 返回: Domenic Bosco发件人名称字符串
   String get emailNameDomenic {
     return Intl.message(
       'Domenic Bosco',
@@ -190,7 +226,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Design`
+  /// 获取设计邮件主题
+  ///
+  /// 返回: 设计邮件主题字符串
   String get emailSubjectDesign {
     return Intl.message(
       'Design',
@@ -200,7 +238,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Elenor Pena`
+  /// 获取Elenor Pena发件人名称
+  ///
+  /// 返回: Elenor Pena发件人名称字符串
   String get emailNameElenor {
     return Intl.message(
       'Elenor Pena',
@@ -210,7 +250,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Job Opportunities`
+  /// 获取工作机会邮件主题
+  ///
+  /// 返回: 工作机会邮件主题字符串
   String get emailSubjectJobOpportunities {
     return Intl.message(
       'Job Opportunities',
@@ -220,7 +262,9 @@ class AppLocalizations {
     );
   }
 
-  /// `New Message`
+  /// 获取新消息文本
+  ///
+  /// 返回: 新消息文本字符串
   String get newMessage {
     return Intl.message(
       'New Message',
@@ -230,7 +274,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Get Messages`
+  /// 获取消息文本
+  ///
+  /// 返回: 获取消息文本字符串
   String get getMessages {
     return Intl.message(
       'Get Messages',
@@ -240,7 +286,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Inbox`
+  /// 获取收件箱文本
+  ///
+  /// 返回: 收件箱文本字符串
   String get inbox {
     return Intl.message(
       'Inbox',
@@ -250,7 +298,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Sent`
+  /// 获取已发送文本
+  ///
+  /// 返回: 已发送文本字符串
   String get sent {
     return Intl.message(
       'Sent',
@@ -260,7 +310,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Drafts`
+  /// 获取草稿箱文本
+  ///
+  /// 返回: 草稿箱文本字符串
   String get drafts {
     return Intl.message(
       'Drafts',
@@ -270,7 +322,9 @@ class AppLocalizations {
     );
   }
 
-  /// `Deleted`
+  /// 获取已删除文本
+  ///
+  /// 返回: 已删除文本字符串
   String get deleted {
     return Intl.message(
       'Deleted',
@@ -279,6 +333,15 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// 获取默认用户名
+  get defaultUserName => "1";
+
+  /// 获取默认邮件主题
+  get defaultEmailSubject => "2";
+
+  /// 获取默认邮件内容
+  get defaultEmailBody => "3";
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

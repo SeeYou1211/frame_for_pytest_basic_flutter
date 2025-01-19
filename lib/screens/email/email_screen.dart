@@ -65,7 +65,7 @@ class EmailScreen extends StatelessWidget {
                                         ),
                                       ),
                                       Text(
-                                        email.subject ?? 'No Subject',
+                                        email.subject,
                                         style: Theme.of(context)
                                             .textTheme
                                             .titleLarge,
@@ -75,7 +75,7 @@ class EmailScreen extends StatelessWidget {
                                 ),
                                 const SizedBox(width: kDefaultPadding / 2),
                                 Text(
-                                  email.subject ?? 'No Subject',
+                                  email.subject,
                                   style: Theme.of(context).textTheme.titleLarge,
                                 ),
                               ],
@@ -90,7 +90,7 @@ class EmailScreen extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      email.body ?? '',
+                                      email.body,
                                       style: const TextStyle(
                                         height: 1.5,
                                         color: Color(0xFF4D5875),
@@ -101,7 +101,7 @@ class EmailScreen extends StatelessWidget {
                                     Row(
                                       children: [
                                         Text(
-                                          email.body ?? '',
+                                          email.body,
                                           style: Theme.of(context)
                                               .textTheme
                                               .bodyMedium,
